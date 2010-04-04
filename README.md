@@ -24,22 +24,25 @@ Installed packages:
 -------------------
 
 from macports:
- - macports
- - wget
- - libjpeg
- - python26
- - py26-lxml
- - python_select
+
+- macports
+- wget
+- libjpeg
+- python26
+- py26-lxml
+- python_select
 
 from 'official' dmg:
- - mysql
- - git
+
+- mysql
+- git
 
 from pypi:
- - pip
- - virtualenv
- - virtualenvwrapper
- - mysql-python
- - PIL
+
+- pip
+- virtualenv
+- virtualenvwrapper
+- mysql-python
+- PIL
 
 And it sets up your .profile.
