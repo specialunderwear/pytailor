@@ -23,19 +23,19 @@ installed from macports (mysql).
 Installed packages:
 -------------------
 
-from macports:
+from 'official' dmg:
 
 - macports
+- mysql
+- git
+
+from macports:
+
 - wget
 - libjpeg
 - python26
 - py26-lxml
 - python_select
-
-from 'official' dmg:
-
-- mysql
-- git
 
 from pypi:
 
