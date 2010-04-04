@@ -94,13 +94,13 @@ sudo ./mountpoint/mysql-${MYSQLVERSION}-osx10.6-x86_64.pkg/Contents/Resources/pr
 sudo installer -pkg mountpoint/mysql-${MYSQLVERSION}-osx10.6-x86_64.pkg -target LocalSystem
 sudo ./mountpoint/mysql-${MYSQLVERSION}-osx10.6-x86_64.pkg/Contents/Resources/postflight
 echo "Installing mysql prefpane in system preferences."
-echo "Close system preferences to after installing to resume the pytailor!!!!"
+echo "Close system preferences after installing the prefpane to resume pytailor!!!!"
 open -W mountpoint/MySQL.prefPane
 hdiutil detach mountpoint
 
 # install git without installing new perl
 echo "getting git for osx"
-wget --no-clobber http://git-osx-installer.googlecode.com/files/git-1.7.0.3-intel-leopard.dmg
+wget --no-clobber http://git-osx-installer.googlecode.com/files/git-${GITVERSION}-intel-leopard.dmg
 hdiutil attach git-${GITVERSION}-intel-leopard.dmg -mountpoint mountpoint
 echo "installing git for osx."
 sudo installer -pkg mountpoint/git-${GITVERSION}-intel-leopard.pkg -target LocalSystem
