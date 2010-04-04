@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/sh
 #
 # pytailor.sh
 # Turn a naked apple osx 10.6 machine into a python development machine.
@@ -24,19 +24,22 @@
 #
 # Installed packages:
 #
-# from macports:
+# from 'official' dmg:
+#
 # - macports
+# - mysql
+# - git
+#
+# from macports:
+#
 # - wget
 # - libjpeg
 # - python26
 # - py26-lxml
 # - python_select
 #
-# from 'official' dmg:
-# - mysql
-# - git
-#
 # from pypi:
+#
 # - pip
 # - virtualenv
 # - virtualenvwrapper
@@ -67,6 +70,7 @@ sudo installer -pkg mountpoint/MacPorts-${MACPORTSVERSION}.pkg -target LocalSyst
 echo "running the post install script."
 sudo PACKAGE_PATH=mountpoint/MacPorts-1.8.2.pkg ./mountpoint/MacPorts-1.8.2.pkg/Contents/Resources/postflight
 hdiutil detach mountpoint
+export PATH="/opt/local/bin:$PATH"
 
 # install packages
 echo "installing wget."
