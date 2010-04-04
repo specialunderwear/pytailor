@@ -94,7 +94,8 @@ sudo ./mountpoint/mysql-${MYSQLVERSION}-osx10.6-x86_64.pkg/Contents/Resources/pr
 sudo installer -pkg mountpoint/mysql-${MYSQLVERSION}-osx10.6-x86_64.pkg -target LocalSystem
 sudo ./mountpoint/mysql-${MYSQLVERSION}-osx10.6-x86_64.pkg/Contents/Resources/postflight
 echo "Installing mysql prefpane in system preferences."
-open mountpoint/MySQL.prefPane
+echo "Close system preferences to after installing to resume the pytailor!!!!"
+open -W mountpoint/MySQL.prefPane
 hdiutil detach mountpoint
 
 # install git without installing new perl
