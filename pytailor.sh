@@ -132,10 +132,12 @@ sudo pip install virtualenv
 sudo pip install virtualenvwrapper
 echo "creating virtualenv home in ~/.virtualenvs."
 mkdir ~/.virtualenvs
-echo "Adding virtualenvwrapper_bashrc to ~/.profile"
+echo "Adding virtualenvwrapper_bashrc to ~/.profile (virtualenvwrapper.sh actually)"
 echo "
-#Virtualenvwrapper is only usefull if it is activated in the profile:
-source virtualenvwrapper_bashrc
+# Virtualenvwrapper is only usefull if it is activated in the profile:
+# since version 2 of virtualenvwrapper it is virtualenvwrapper.sh 
+# instead of virtualenvwrapper_bashrc
+source virtualenvwrapper.sh
 " >> ~/.profile
 
 echo "installing mysql-python."
