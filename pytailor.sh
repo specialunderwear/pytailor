@@ -110,7 +110,7 @@ hdiutil detach mountpoint
 echo "adding python script dir and mysql to PATH in ~/.profile."
 echo "
 # macports:
-export PATH=\"/opt/local/bin:$PATH\"
+export PATH=\"/opt/local/bin:\$PATH\"
 
 #mysql should be in the path for mysql_config.
 export PATH=\"/usr/local/mysql/bin:\$PATH\"
