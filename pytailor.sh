@@ -49,9 +49,9 @@
 # And it sets up your .profile.
 
 # fiddle with this if you need different versions.
-MACPORTSVERSION="1.8.2"
-GITVERSION="1.7.0.3"
-MYSQLVERSION="5.1.45"
+MACPORTSVERSION="1.9.2"
+GITVERSION="1.7.5.4"
+MYSQLVERSION="5.1.57"
 MYSQLLOCATION="http://mirror.leaseweb.com/mysql/Downloads/MySQL-5.1/"
 
 if [ ! -d '/Developer' ]; then
@@ -100,7 +100,7 @@ hdiutil detach mountpoint
 
 # install git without installing new perl
 echo "getting git for osx"
-wget --no-clobber http://git-osx-installer.googlecode.com/files/git-${GITVERSION}-intel-leopard.dmg
+wget --no-clobber http://git-osx-installer.googlecode.com/files/git-${GITVERSION}-x86_64-leopard-leopard.dmg
 hdiutil attach git-${GITVERSION}-intel-leopard.dmg -mountpoint mountpoint
 echo "installing git for osx."
 sudo installer -pkg mountpoint/git-${GITVERSION}-intel-leopard.pkg -target LocalSystem
